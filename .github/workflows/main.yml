@@ -1,0 +1,22 @@
+name: sample_workflow
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  sample_job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: first_step
+        run: echo You are at Codecademy.
+
+      - name: second_step
+        run: |
+          echo You are learning GitHub Actions.
+          echo It is fun to learn programming at Codecademy!
